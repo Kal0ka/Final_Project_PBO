@@ -14,7 +14,7 @@ public class AuthManager {
             PreparedStatement stmt = conn.prepareStatement(
                     "SELECT * FROM pre_registered WHERE name = ? AND nim_nip = ? AND role_id = ?"
             );
-            stmt.setString(1, name);
+            stmt.setString(1, nam);
             stmt.setString(2, nimNip);
             stmt.setInt(3, roleId);
             ResultSet rs = stmt.executeQuery();
