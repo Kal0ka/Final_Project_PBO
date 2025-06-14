@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.last.Gui.LoginController"
+            prefWidth="400" prefHeight="500"
+            style="-fx-background-color: #f4f4f4;">
+    <VBox alignment="CENTER" spacing="20.0" AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+        <Label text="SISTEM PERPUSTAKAAN" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+        <TextField fx:id="emailField" promptText="Email" maxWidth="300"/>
+        <PasswordField fx:id="passwordField" promptText="Password" maxWidth="300"/>
+
+        <Button text="Login" onAction="#handleLogin" maxWidth="300" style="-fx-background-color: #3498db; -fx-text-fill: white;"/>
+
+        <Label fx:id="statusLabel" textFill="red" wrapText="true"/>
+
+        <HBox alignment="CENTER" spacing="5">
+            <Label text="Belum punya akun?"/>
+            <Hyperlink text="Daftar di sini" onAction="#goToSignUp"/>
+        </HBox>
+    </VBox>
+</AnchorPane>
