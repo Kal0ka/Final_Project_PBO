@@ -1,0 +1,68 @@
+/* admin_style.css */
+
+.header-label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px;
+    -fx-alignment: center;
+    -fx-text-fill: #2a2a2a;
+}
+
+.tab-content {
+    -fx-padding: 15px;
+    -fx-background-color: #f7f7f7;
+}
+
+.styled-table {
+    -fx-table-cell-border-color: #dddddd;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-background-color: white;
+}
+
+.styled-table .column-header-background {
+    -fx-background-color: #eaeaea;
+}
+
+.styled-table .table-row-cell:filled:selected {
+    -fx-background-color: #cde8ff;
+}
+
+.action-button {
+    -fx-background-color: #3c8dbc;
+    -fx-text-fill: white;
+    -fx-padding: 6px 12px;
+    -fx-background-radius: 4;
+    -fx-font-weight: bold;
+}
+
+.danger-button {
+    -fx-background-color: #d9534f;
+    -fx-text-fill: white;
+    -fx-padding: 6px 12px;
+    -fx-background-radius: 4;
+    -fx-font-weight: bold;
+}
+
+.table-view {
+    -fx-font-size: 13px;
+    -fx-table-cell-border-color: #dddddd;
+    -fx-background-color: white;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #e0e0e0;
+}
+
+.table-view .column-header {
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.table-view .table-row-cell:filled:selected {
+    -fx-background-color: #cce6ff;
+}

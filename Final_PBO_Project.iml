@@ -6,6 +6,9 @@
       <sourceFolder url="file://$MODULE_DIR$/Final" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Final_Project" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Final_Project/com/last/csvloh" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/resource" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Dbase" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -18,7 +21,16 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="jakarta.mail-2.0.1(2)" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Downloads/jbcrypt-0.4.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="jakarta.activation-2.0.1" level="project" />
     <orderEntry type="library" name="javafx-swt" level="project" />
   </component>
 </module>

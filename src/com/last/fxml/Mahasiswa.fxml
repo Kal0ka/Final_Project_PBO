@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml/1"
+           xmlns="http://javafx.com/javafx/23.0.1"
+           fx:controller="com.last.Gui.MahasiswaController"
+           prefHeight="600.0" prefWidth="960.0">
+
+    <!-- Background Image -->
+    <ImageView fitHeight="600.0" fitWidth="960.0" preserveRatio="false">
+        <image>
+            <Image url="@/gambar/BG.jpg" />
+        </image>
+    </ImageView>
+
+    <!-- Semi-transparent overlay -->
+    <AnchorPane style="-fx-background-color: rgba(255,255,255,0.6);">
+        <VBox alignment="TOP_CENTER" spacing="15"
+              maxWidth="920" prefWidth="920"
+              AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+              style="-fx-background-color: rgba(255, 255, 255, 0.85); -fx-background-radius: 16;">
+
+            <padding>
+                <Insets top="20" left="30" right="30" bottom="20"/>
+            </padding>
+
+            <!-- TabPane -->
+            <TabPane fx:id="mainTabPane" tabClosingPolicy="UNAVAILABLE">
+                <tabs>
+
+                    <!-- TAB 1: Katalog Buku -->
+                    <Tab text="📚 Katalog Buku">
+                        <VBox spacing="15">
+                            <padding>
+                                <Insets top="20" left="20" right="20" bottom="20" />
+                            </padding>
+
+                            <Label text="Selamat Datang Di Perpustakaan Mahasiswa"
+                                   style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+
+                            <HBox spacing="10" alignment="CENTER">
+                                <TextField fx:id="searchField"
+                                           promptText="Cari berdasarkan judul atau kategori..."
+                                           HBox.hgrow="ALWAYS"
+                                           style="-fx-background-radius: 8;" />
+                                <Button fx:id="searchButton" text="Cari"
+                                        onAction="#onSearch"
+                                        style="-fx-background-color: #4CAF50; -fx-text-fill: white;" />
+                            </HBox>
+
+                            <Label text="📚 Daftar Buku Tersedia"
+                                   style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+                            <TableView fx:id="bookTable" prefHeight="300"
+                                       style="-fx-background-color: rgba(255,255,255,0.9); -fx-background-radius: 10;">
+                                <columns>
+                                    <TableColumn fx:id="titleColumn" text="Judul" prefWidth="300" />
+                                    <TableColumn fx:id="categoryColumn" text="Kategori" prefWidth="200" />
+                                    <TableColumn fx:id="stockColumn" text="Stok" prefWidth="100" />
+                                </columns>
+                            </TableView>
+
+                            <HBox spacing="10">
+                                <Button fx:id="borrowButton" text="Pinjam Buku"
+                                        onAction="#onBorrow"
+                                        style="-fx-background-color: #2196F3; -fx-text-fill: white;" />
+                                <Button fx:id="logoutButton1" text="Logout"
+                                        onAction="#onLogout"
+                                        style="-fx-background-color: #dd4444; -fx-text-fill: white;" />
+                            </HBox>
+                        </VBox>
+                    </Tab>
+
+                    <!-- TAB 2: Peminjaman Saya -->
+                    <Tab text="🔁 Peminjaman Saya">
+                        <VBox spacing="15">
+                            <padding>
+                                <Insets top="20" left="20" right="20" bottom="20" />
+                            </padding>
+
+                            <Label text="📖 Buku yang Anda Pinjam"
+                                   style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+                            <TableView fx:id="borrowedTable" prefHeight="300"
+                                       style="-fx-background-color: rgba(255,255,255,0.9); -fx-background-radius: 10;">
+                                <columns>
+                                    <TableColumn fx:id="borrowedTitleColumn" text="Judul" prefWidth="300" />
+                                    <TableColumn fx:id="borrowedIsbnColumn" text="ISBN" prefWidth="150" />
+                                    <TableColumn fx:id="dueDateColumn" text="Tenggat Pengembalian" prefWidth="150" />
+                                </columns>
+                            </TableView>
+
+                            <HBox spacing="10">
+                                <Button fx:id="returnButton" text="Kembalikan Buku"
+                                        onAction="#onReturn"
+                                        style="-fx-background-color: #8BC34A; -fx-text-fill: white;" />
+                                <Button fx:id="extendButton" text="Perpanjang Masa Pinjam"
+                                        onAction="#onExtend"
+                                        style="-fx-background-color: #FFC107; -fx-text-fill: black;" />
+                                <Button fx:id="logoutButton" text="Logout"
+                                        onAction="#onLogout"
+                                        style="-fx-background-color: #dd4444; -fx-text-fill: white;" />
+                            </HBox>
+                        </VBox>
+                    </Tab>
+
+                </tabs>
+            </TabPane>
+
+        </VBox>
+    </AnchorPane>
+</StackPane>

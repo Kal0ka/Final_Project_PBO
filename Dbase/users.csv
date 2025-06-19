@@ -1,0 +1,6 @@
+id,name,email,password,role_id,nim_nip
+6,Admin,adminperpus@gmail.com,admin123,3,0000000
+12,Pascal Kaloka Jaya,pascalp999@gmail.com,kalokajaya,1,202410370110055
+13,Susilo Adi Nugroho,adinugroho@gmail.com,nugrohoadi,1,202410370110001
+14,none,a@gmail.com,123,3,0000
+15,Hamzah Alwi Ramadhani,hamzahalwir19@gmail.com,badakberenang,1,202410370110026
